@@ -6,13 +6,13 @@
 
 External Libraries为编译器自带工具，展示在项目中使用到的外部文件。
 
- 
 
-![img](.\IMAGE\clip_image001.png)
+
+![img](https://github.com/ZoRoronoa/8PuzzleByAstar-GA/blob/master/IMAGE/clip_image001.png)
 
 具体的项目架构图如下图所示：
 
-![img](.\IMAGE\clip_image003.jpg)
+![img](https://github.com/ZoRoronoa/8PuzzleByAstar-GA/blob/master/IMAGE/clip_image003.png)
 
 
 
@@ -20,7 +20,7 @@ External Libraries为编译器自带工具，展示在项目中使用到的外�
 
 ### 1.2.1 状态的表示
 
-![img](.\IMAGE\clip_image005.jpg)
+![img](https://github.com/ZoRoronoa/8PuzzleByAstar-GA/blob/master/IMAGE/clip_image005.png)
 
 ​    其中，`Board()`为棋盘的类，`move_left`、`move_right`、`move_up`、`move_down`四个函数控制棋盘的移动，`state`为初始化棋盘的状态，`end_state`为棋盘需要移动到的目标状态，`g`和`h`为启发式函数的两个分量，其中h的值由函数`cal_h()` 计算，`parent`为当前棋盘的父节点(也是一个棋盘)，若为首节点则父节点为空, `a_star()`函数为算法控制单元，`is_end_state() `检测当前棋盘是否已经达到目标棋盘的状态。`Find_where() `函数寻找数码’9’的位置，`get_node_in_open()`` nd_node_in_list()` 负责在对应的列表中寻找符合要求的节点，以便完成后续的加入列表或者删除等操作。
 
@@ -121,7 +121,7 @@ External Libraries为编译器自带工具，展示在项目中使用到的外�
 
 ### 1.3.5 状态的表示
 
-**![img](.\IMAGE\clip_image007.jpg)**
+![img](https://github.com/ZoRoronoa/8PuzzleByAstar-GA/blob/master/IMAGE/clip_image007.png)
 
    `MAX_GENERATION`表示遗传算法迭代的最大次数，在本实验当中，通过测试发现，多数实验在500代以内可以完成，已经测试的实验中全部在1000代以内完成，故将`MAX_GENERATION`设置为1000。`POPULATION_SIZE`设置为34，其构成为10+4*6， 即上一代选择得到的十个个体，以及十个个体当中的8个（4对）个体交叉得到的24个新个体（每对个体得到6个新个体）。由此，我们的交叉的概率Pj为0.8。
 
